@@ -1,1 +1,1 @@
-Fue creado unica y exclusivamente para mi personita especia 
+Fue creado unica y exclusivamente para mi personita especial
