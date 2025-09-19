@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feliz día mi amor</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fce4ec;
+      overflow: hidden;
+    }
+    .screen {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .active {
+      display: block
+    }
+    .password-screen {
+      flex-direction: column;
+    }
+    .keypad {
+      display: grid;
+      grid-template-columns: repeat(3, 60px);
+      gap: 10px;
+      margin-top: 20px;
+      justify-content: center;
+    }
+    .key {
+      background-color: #f8bbd0;
+      border: none;
+      border-radius: 10px;
+      font-size: 20px;
+      padding: 15px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .key:hover {
+      background-color: #f48fb1;
+    }
+    .input-display {
+      font-size: 24px;
+      margin-top: 20px;
+      letter-spacing: 8px;
+    }
+ .notepad {
+  background-color: #fff0f6;
+  border: 3px solid #f8bbd0;
+  padding: 20px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 360px;
+  text-align: left;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+    .notepad h3 {
+      margin-top: 0;
+    }
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      transform: rotate(45deg);
+      animation: floatUp 5s linear infinite;
+      opacity: 0.7;
+    }
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 50%;
+    }
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+    .heart::after {
+      top: 0;
+      left: -10px;
+    }
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1) rotate(45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) scale(1.5) rotate(45deg);
+        opacity: 0;
+      }
+    }
+  
+.music-button {
+  padding: 10px 20px;
+  background-color: #f48fb1;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.music-button:hover {
+  background-color: #f06292;
+}
+</style>
+</head>
+<body>
+<div id="passwordScreen" class="screen password-screen active">
+  <h2>🔒 Enter password</h2>
+  <div class="input-display" id="inputDisplay">••••</div>
+  <div class="keypad">
+    <button class="key" onclick="enterDigit('1')">1</button>
+    <button class="key" onclick="enterDigit('2')">2</button>
+    <button class="key" onclick="enterDigit('3')">3</button>
+    <button class="key" onclick="enterDigit('4')">4</button>
+    <button class="key" onclick="enterDigit('5')">5</button>
+    <button class="key" onclick="enterDigit('6')">6</button>
+    <button class="key" onclick="enterDigit('7')">7</button>
+    <button class="key" onclick="enterDigit('8')">8</button>
+    <button class="key" onclick="enterDigit('9')">9</button>
+    <button class="key" onclick="deleteDigit()">←</button>
+    <button class="key" onclick="enterDigit('0')">0</button>
+    <div></div>
+  </div>
+</div>
+<div id="notepadScreen" class="screen">
+  <div class="notepad">
+ <div style="text-align:center; margin-bottom: 15px;">
+    <img src="tulipanes1.jpg" alt="Ramo de tulipanes 1" style="max-width: 180px; border-radius: 10px; margin: 8px;">
+    <img src="tulipanes2.jpg" alt="Ramo de tulipanes 2" style="max-width: 180px; border-radius: 10px; margin: 8px;">
+  </div>
+</div>
+<h3>📅 19 de cada mes </h3>
+<h4>💖 Feliz primer mes amor 💖 </h4>
+<p>
+   Gracias por ser parte de mi vida, por ser mi novia, pero es que "novia" es muy pequeño para describir lo que en realidad eres, porque eres mi alegría, mi pilar, una Reina para la cual no hay castillo tan grande que vaya conforme a su belleza. 
+   Eres una obra de arte porque de primera impresión me enamoraste, pero analizando y conociendo cada pequeño detalle de ti me voy enamorando más y más. 
+   Eres inigualable y hermosa,"La niña de mis ojos" mi sueño hecho realidad. 
+</p>
+<p>
+    Eres calma dentro de lo caótico, pero no se compara al caos que hay en mi corazón cuando me dices "te amo" y que al mismo tiempo me calma. 
+    Contigo me siento seguro y amado, eres mi vida entera, contigo me siento completo día con día.
+</p>
+<p>
+    En ocasiones no lo demuestro de la mejor manera, puedo llegar a ser muy tosco y no logro demostrártelo correctamente, 
+    pero si de algo puedes estar segura es que te amo con todo mi corazón. 
+    Te amo inmensamente, tanto que no hay palabras correctas para expresarlo perfectamente. 
+</p>
+<p>
+    Simplemente eres la mejor, pero para abreviar todo esto y más, digo que eres mi novia... 
+    y gracias a eso yo soy el hombre más feliz del mundo. 
+</p>
+<p>
+    TE AMO 💗
+</p>
+<div style="text-align:center; margin-top: 20px;">
+    <img src="tulipanes3.jpg" alt="Ramo de tulipanes 3" style="max-width: 220px; border-radius: 10px; margin: 10px;">
+  </div>
+  
+<div style="text-align:center; margin-top: 20px;">
+  <button class="music-button" onclick="document.getElementById('bgMusic').play()">▶️ Reproducir música</button>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<audio id="bgMusic" src="cancion.mp3" loop></audio>
+<script>
+  const correctPassword = '1908';
+  let input = '';
+
+  function enterDigit(digit) {
+    if (input.length < 4) {
+      input += digit;
+    }
+    updateDisplay();
+    if (input.length === 4) {
+      if (input === correctPassword) {
+        document.getElementById('passwordScreen').classList.remove('active');
+        document.getElementById('notepadScreen').classList.add('active');
+        
+        generateHearts();
+      } else {
+        alert('Contraseña incorrecta, intenta de nuevo');
+        input = '';
+        updateDisplay();
+      }
+    }
+  }
+
+  function deleteDigit() {
+    if (input.length > 0) {
+      input = input.slice(0, -1);
+      updateDisplay();
+    }
+  }
+
+  function updateDisplay() {
+    const display = document.getElementById('inputDisplay');
+    display.textContent = input.padEnd(4, '•');
+  }
+
+  function generateHearts() {
+    setInterval(() => {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (3 + Math.random() * 2) + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => {
+        heart.remove();
+      }, 5000);
+    }, 300);
+  }
+</script>
+</body>
+</html>
